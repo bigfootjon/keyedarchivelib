@@ -1,0 +1,6 @@
+pyre-check
+black
+flake8
+mypy
+coverage
+python-coveralls
