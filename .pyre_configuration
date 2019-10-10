@@ -1,0 +1,7 @@
+{
+  "source_directories": [
+    "."
+  ],
+  "typeshed": "/usr/local/lib/pyre_check/typeshed/",
+  "exclude": [".*/build"]
+}

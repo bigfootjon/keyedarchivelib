@@ -1,0 +1,27 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.8-rc
+    steps:
+      - checkout
+      - run:
+          name: Build Package
+          command: python3 setup.py sdist bdist_wheel
+      - run:
+          name: Run Tests
+          command: |
+              PYTHONPATH=$PYTHONPATH:`pwd` coverage run -m unittest --verbose
+              coveralls
+      - run:
+          name: Check Types - Pyre
+          command: pyre check
+      - run:
+          name: Check Types - Mypy
+          command: mypy .
+      - run:
+          name: Check Lint - Flake8
+          command: flake8
+      - run:
+          name: Check Format - Black
+          command: black --check .
