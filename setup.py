@@ -14,7 +14,7 @@ setup(
     packages=setuptools.find_packages(exclude=["test", "test.*"]),
     version=keyedarchivelib.VERSION,
     python_requires=">=3.8",
-    description="TODO",
+    description="Generate and parse NSKeyedArchive files",
     long_description=long_description,
     long_description_content_type="text/markdown",
     install_requires=[],
