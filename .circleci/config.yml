@@ -19,9 +19,9 @@ jobs:
 #      - run:
 #          name: Check Types - Pyre
 #          command: pyre check
-      - run:
-          name: Check Types - Mypy
-          command: mypy .
+#      - run:
+#          name: Check Types - Mypy
+#          command: mypy .
       - run:
           name: Check Lint - Flake8
           command: flake8
