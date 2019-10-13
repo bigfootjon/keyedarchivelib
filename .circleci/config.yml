@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
             name: Install Dependencies
-            command: sudo pip3 install --requirement requirements.txt
+            command: sudo pip3.8 install --requirement requirements.txt
       - run:
           name: Build Package
           command: python3 setup.py sdist bdist_wheel
