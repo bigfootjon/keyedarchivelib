@@ -26,7 +26,7 @@ setup(
     + keyedarchivelib.VERSION,
     keywords=[],
     classifiers=[
-        "Development Status :: 5 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Operating System :: OS Independent",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
