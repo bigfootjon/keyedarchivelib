@@ -18,4 +18,4 @@ if os.popen("git tag -l " + keyedarchivelib.VERSION).read() != "":
     os.system("python3 -m twine upload dist/*")
 else:
     print("There is already a tag for version " + keyedarchivelib.VERSION)
-    exit(1)
+    print("Assuming that it exists on PyPi as well, quiting")
