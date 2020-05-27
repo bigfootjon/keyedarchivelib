@@ -1,6 +1,8 @@
 # pyre-strict
-from plistlib import UID
+
 from typing import List, Any, Dict
+
+from keyedarchivelib.compat import UID
 
 
 def plist_to_dict(plist: Dict[Any, Any]) -> Dict[Any, Any]:  # pyre-ignore
