@@ -1,0 +1,37 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Fetch all tags
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Build Package
+        run: python3 setup.py sdist bdist_wheel
+      - name: Run Tests
+        run: |
+          PYTHONPATH=$PYTHONPATH:`pwd` coverage run -m unittest --verbose
+#          coveralls
+#      - name: Check Types - Pyre
+#        run: pyre check
+#      - name: Check Types - MyPy
+#        run: mypy .
+      - name: Check Lint - Flake8
+        run: flake8
+      - name: Check Format - Black
+        run: black --check .
