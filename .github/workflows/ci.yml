@@ -53,8 +53,8 @@ jobs:
         run: |
           git config --global user.email "github-bot@jonjanzen.com"
           git config --global user.name "bigfootjon-bot"
-#      - name: Publish to PyPi
-#        env:
-#          TWINE_USERNAME: bigfootjon
-#          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-#        run: python3 publish.py
+      - name: Publish to PyPi
+        env:
+          TWINE_USERNAME: bigfootjon
+          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        run: python3 publish.py
