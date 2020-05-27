@@ -1,5 +1,7 @@
 # keyedarchivelib
 
+TODO: Support python3.7
+
 Basic Python (>=3.8) library to generate and parse NSKeyedArchive files.
 
 ## Installation
