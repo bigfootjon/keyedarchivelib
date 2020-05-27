@@ -1,6 +1,8 @@
-pyre-check
-black
-flake8
+wheel
+twine
 mypy
+pyre-check
+flake8
+black
 coverage
 python-coveralls
