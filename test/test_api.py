@@ -17,7 +17,7 @@ class TestApi(TestCase):
         keyedarchivelib.dump(d, file)
         self.assertEqual(keyedarchivelib.load(file), d)
 
-    def test_keyed_archive_data(self):
+    def test_keyed_archive_data(self) -> None:
         binary_data = binascii.a2b_base64(
             b"""YnBsaXN0MDDUAQIDBAUGGh1ZJGFyY2hpdmVyWCRvYmplY
             3RzVCR0b3BYJHZlcnNpb25fEA9OU0tleWVkQXJjaGl2ZXKlBw
