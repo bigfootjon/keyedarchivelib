@@ -4,10 +4,10 @@ from typing import Type, Tuple, Any
 
 try:
     # python 3.8 and above
-    from plistlib import UID
+    from plistlib import UID  # type: ignore
 except ImportError:
     # python 3.7 and below
-    class UID:
+    class UID:  # type: ignore
         def __init__(self, data: int) -> None:
             # pyre-ignore
             if not isinstance(data, int):

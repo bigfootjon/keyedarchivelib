@@ -10,8 +10,8 @@ from keyedarchivelib.util import plist_to_dict, dict_to_plist
 if sys.version_info < (3, 8):
     # Versions older than 3.8 need to be hot-patched
 
-    plistlib._BinaryPlistParser._patched_read_object = (
-        plistlib._BinaryPlistParser._read_object
+    plistlib._BinaryPlistParser._patched_read_object = (  # type: ignore
+        plistlib._BinaryPlistParser._read_object  # type: ignore
     )
 
     def _read_object(self, in_arg):
@@ -30,11 +30,11 @@ if sys.version_info < (3, 8):
             return self._patched_read_object(in_arg)
 
     # noinspection PyProtectedMember
-    plistlib._BinaryPlistParser._read_object = _read_object
+    plistlib._BinaryPlistParser._read_object = _read_object  # type: ignore
 
     # noinspection PyProtectedMember
-    plistlib._BinaryPlistWriter._patched_write_object = (
-        plistlib._BinaryPlistWriter._write_object
+    plistlib._BinaryPlistWriter._patched_write_object = (  # type: ignore
+        plistlib._BinaryPlistWriter._write_object  # type: ignore
     )
 
     def _write_object(self, value):
@@ -58,7 +58,7 @@ if sys.version_info < (3, 8):
             self._patched_write_object(value)
 
     # noinspection PyProtectedMember
-    plistlib._BinaryPlistWriter._write_object = _write_object
+    plistlib._BinaryPlistWriter._write_object = _write_object  # type: ignore
 
 
 def load(  # pyre-ignore
