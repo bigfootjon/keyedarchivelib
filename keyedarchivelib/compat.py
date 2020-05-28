@@ -1,5 +1,7 @@
 # pyre-strict
 
+from __future__ import annotations
+
 from typing import Type, Tuple, Any
 
 try:
@@ -24,7 +26,7 @@ except ImportError:
         def __repr__(self) -> str:
             return "%s(%s)" % (self.__class__.__name__, repr(self.data))
 
-        def __reduce__(self) -> Tuple[Type["UID"], Tuple[int]]:
+        def __reduce__(self) -> Tuple[Type[UID], Tuple[int]]:
             return self.__class__, (self.data,)
 
         def __eq__(self, other: Any) -> bool:  # pyre-ignore[2]
