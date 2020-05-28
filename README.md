@@ -12,7 +12,9 @@ Install with pip:
 
 The `keyedarchivelib` module has the same interface as the `plistlib` standard library module:
 
-`load`, `loads`, `dump`, and `dumps` have the same function signatures as [plistlib](https://docs.python.org/3/library/plistlib.html).
+`load`, `loads`, `dump`, and `dumps` have the same function signatures as
+[plistlib](https://docs.python.org/3/library/plistlib.html) minus the `fmt` option, which is not available since it's
+always binary.
 
 The `keyedarchivelib` module includes type hints.
 

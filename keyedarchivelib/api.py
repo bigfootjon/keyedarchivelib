@@ -2,7 +2,7 @@
 import plistlib
 import struct
 import sys
-from typing import Type, Optional, BinaryIO, Dict, Any
+from typing import Type, BinaryIO, Dict, Any
 
 from keyedarchivelib.compat import UID
 from keyedarchivelib.util import plist_to_dict, dict_to_plist
@@ -62,39 +62,44 @@ if sys.version_info < (3, 8):
 
 
 def load(  # pyre-ignore
-    fp: BinaryIO,
-    fmt: Optional[plistlib.PlistFormat] = None,
-    dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
+    fp: BinaryIO, dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
 ) -> Dict[Any, Any]:
-    return plist_to_dict(plistlib.load(fp, fmt=fmt, dict_type=dict_type))
+    return plist_to_dict(
+        plistlib.load(fp, fmt=plistlib.FMT_BINARY, dict_type=dict_type)
+    )
 
 
 def loads(  # pyre-ignore
-    value: bytes,
-    fmt: Optional[plistlib.PlistFormat] = None,
-    dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
+    value: bytes, dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
 ) -> Dict[Any, Any]:
-    return plist_to_dict(plistlib.loads(value, fmt=fmt, dict_type=dict_type))
+    return plist_to_dict(
+        plistlib.loads(value, fmt=plistlib.FMT_BINARY, dict_type=dict_type)
+    )
 
 
 def dump(
     value: Dict[Any, Any],  # pyre-ignore
     fp: BinaryIO,
-    fmt: plistlib.PlistFormat = plistlib.FMT_XML,
     sort_keys: bool = True,
     skipkeys: bool = False,
 ) -> None:
     plistlib.dump(
-        dict_to_plist(value), fp, fmt=fmt, sort_keys=sort_keys, skipkeys=skipkeys
+        dict_to_plist(value),
+        fp,
+        fmt=plistlib.FMT_BINARY,
+        sort_keys=sort_keys,
+        skipkeys=skipkeys,
     )
 
 
 def dumps(
     value: Dict[Any, Any],  # pyre-ignore
-    fmt: plistlib.PlistFormat = plistlib.FMT_XML,
     skipkeys: bool = False,
     sort_keys: bool = True,
 ) -> bytes:
     return plistlib.dumps(
-        dict_to_plist(value), fmt=fmt, skipkeys=sort_keys, sort_keys=skipkeys
+        dict_to_plist(value),
+        fmt=plistlib.FMT_BINARY,
+        skipkeys=sort_keys,
+        sort_keys=skipkeys,
     )
