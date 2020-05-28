@@ -24,8 +24,8 @@ except ImportError:
         def __repr__(self) -> str:
             return "%s(%s)" % (self.__class__.__name__, repr(self.data))
 
-        def __reduce__(self) -> Tuple[Type["UID"], Tuple[int]]:  # type: ignore
-            return self.__class__, (self.data,)
+        def __reduce__(self) -> Tuple[Type["UID"], Tuple[int]]:
+            return self.__class__, (self.data,)  # type: ignore
 
         def __eq__(self, other: Any) -> bool:  # pyre-ignore[2]
             if not isinstance(other, UID):
