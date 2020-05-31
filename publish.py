@@ -5,7 +5,7 @@ import os
 
 import keyedarchivelib
 
-if os.popen("git tag -l " + keyedarchivelib.VERSION).read() != "":
+if os.popen("git tag -l " + keyedarchivelib.VERSION).read() == "":
     os.system(
         "git tag -a "
         + keyedarchivelib.VERSION
