@@ -1,6 +1,6 @@
 # pyre-strict
 
-from typing import Type, Tuple, Any
+from typing import Type, Tuple, Any, Union
 
 try:
     # python 3.8 and above
@@ -9,7 +9,6 @@ except ImportError:
     # python 3.7 and below
     class UID:  # type: ignore
         def __init__(self, data: int) -> None:
-            # pyre-ignore
             if not isinstance(data, int):
                 raise TypeError("data must be an int")
             if data >= 1 << 64:
@@ -29,7 +28,7 @@ except ImportError:
 
         def __eq__(self, other: Any) -> bool:  # pyre-ignore[2]
             if not isinstance(other, UID):
-                return NotImplemented
+                return NotImplemented  # pyre-ignore[7]
             return self.data == other.data
 
         def __hash__(self) -> int:
