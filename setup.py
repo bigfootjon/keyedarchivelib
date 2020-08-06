@@ -1,4 +1,4 @@
-# pyre-ignore-all-errors
+# pyre-strict
 from distutils.core import setup
 
 import setuptools  # type: ignore
