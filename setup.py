@@ -1,9 +1,8 @@
 # pyre-strict
 from distutils.core import setup
 
-import setuptools  # type: ignore
-
 import keyedarchivelib
+import setuptools  # type: ignore
 
 with open("README.md", "r") as readme_file:
     long_description = readme_file.read()

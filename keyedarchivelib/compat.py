@@ -1,6 +1,6 @@
 # pyre-strict
 
-from typing import Type, Tuple, Any
+from typing import Any, Tuple, Type
 
 try:
     # python 3.8 and above

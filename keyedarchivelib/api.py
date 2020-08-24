@@ -2,10 +2,10 @@
 import plistlib
 import struct
 import sys
-from typing import Type, BinaryIO, Dict, Any
+from typing import Any, BinaryIO, Dict, Type
 
 from keyedarchivelib.compat import UID
-from keyedarchivelib.util import plist_to_dict, dict_to_plist
+from keyedarchivelib.util import dict_to_plist, plist_to_dict
 
 if sys.version_info < (3, 8):
     # Versions older than 3.8 need to be hot-patched
