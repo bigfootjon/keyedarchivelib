@@ -62,7 +62,8 @@ if sys.version_info < (3, 8):
 
 
 def load(  # pyre-ignore
-    fp: BinaryIO, dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
+    fp: BinaryIO,
+    dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
 ) -> Dict[Any, Any]:
     return plist_to_dict(
         plistlib.load(fp, fmt=plistlib.FMT_BINARY, dict_type=dict_type)
@@ -70,7 +71,8 @@ def load(  # pyre-ignore
 
 
 def loads(  # pyre-ignore
-    value: bytes, dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
+    value: bytes,
+    dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
 ) -> Dict[Any, Any]:
     return plist_to_dict(
         plistlib.loads(value, fmt=plistlib.FMT_BINARY, dict_type=dict_type)

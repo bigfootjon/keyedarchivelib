@@ -24,7 +24,7 @@ jobs:
       - name: Run Tests
         run: |
           PYTHONPATH=$PYTHONPATH:`pwd` coverage run -m unittest --verbose
-#          coveralls
+      #          coveralls
       - name: Check Types - Pyre
         run: pyre check
       - name: Check Types - MyPy

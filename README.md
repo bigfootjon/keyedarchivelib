@@ -6,7 +6,7 @@ Basic Python (>=3.6) library to generate and parse NSKeyedArchive files.
 
 Install with pip:
 
-``pip3 install keyedarchivelib``
+`pip3 install keyedarchivelib`
 
 ## Usage
 
@@ -18,25 +18,25 @@ always binary.
 
 The `keyedarchivelib` module includes type hints.
 
-For convenience, examples are provided below: 
+For convenience, examples are provided below:
 
 ### Reading (`load` & `loads`)
 
-````python
+```python
 from keyedarchivelib import load
 
 with open("example.plist", 'rb') as fp:
     pl = load(fp)
 print(pl["test"])
-````
+```
 
 ### Writing (`dump` & `dumps`)
 
-````python
+```python
 from keyedarchivelib import dump, dumps
 
 example_dict = {
-    "test": 1 
+    "test": 1
 }
 with open("example.plist", 'wb') as fp:
     dump(example_dict, fp)
@@ -44,7 +44,7 @@ with open("example.plist", 'wb') as fp:
 # ~~~ OR ~~~
 
 print(dumps(example_dict))
-````
+```
 
 ## Note on compatibility
 
