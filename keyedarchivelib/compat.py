@@ -28,7 +28,7 @@ except ImportError:
 
         def __eq__(self, other: Any) -> bool:  # pyre-ignore[2]
             if not isinstance(other, UID):
-                return NotImplemented  # pyre-ignore[7]
+                return NotImplemented
             return self.data == other.data
 
         def __hash__(self) -> int:
