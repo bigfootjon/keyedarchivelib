@@ -1,5 +1,3 @@
-# pyre-strict
-
 from typing import Any, Dict, List
 
 from keyedarchivelib.compat import UID

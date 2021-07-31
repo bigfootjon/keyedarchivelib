@@ -1,4 +1,3 @@
-# pyre-strict
 import binascii
 from io import BytesIO
 from unittest import TestCase

@@ -1,5 +1,3 @@
-# pyre-strict
-
 from typing import Any, Tuple, Type
 
 try:

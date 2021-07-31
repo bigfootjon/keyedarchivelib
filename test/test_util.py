@@ -1,5 +1,3 @@
-# pyre-strict
-
 from unittest import TestCase
 
 from keyedarchivelib.compat import UID

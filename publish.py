@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# pyre-strict
+
 
 import os
 

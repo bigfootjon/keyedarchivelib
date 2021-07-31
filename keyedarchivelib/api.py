@@ -1,4 +1,3 @@
-# pyre-strict
 import plistlib
 import struct
 import sys
