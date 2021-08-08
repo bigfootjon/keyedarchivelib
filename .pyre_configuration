@@ -2,5 +2,6 @@
   "source_directories": [
     "."
   ],
-  "exclude": [".*/build"]
+  "exclude": [".*/build"],
+  "strict": true
 }
