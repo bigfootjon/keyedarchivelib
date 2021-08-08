@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request]
+on: push
 
 jobs:
   ci:
@@ -28,7 +28,7 @@ jobs:
       - name: Check Types - Pyre
         run: pyre check
       - name: Check Types - MyPy
-        run: mypy .
+        run: mypy --exclude "build" .
       - name: Check Lint - Flake8
         run: flake8
       - name: Check Format - Black
