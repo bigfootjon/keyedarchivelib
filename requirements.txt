@@ -1,7 +1,7 @@
 wheel
 twine
 mypy
-pyre-check==0.0.58
+pyre-check
 flake8
 black
 coverage
