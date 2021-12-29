@@ -13,7 +13,7 @@ if sys.version_info < (3, 8):
         plistlib._BinaryPlistParser._read_object  # type: ignore
     )
 
-    def _read_object(self, in_arg):
+    def _read_object(self, in_arg):  # pyre-ignore
         if sys.hexversion >= 0x030605F0:
             offset = self._object_offsets[in_arg]
         else:
@@ -36,7 +36,7 @@ if sys.version_info < (3, 8):
         plistlib._BinaryPlistWriter._write_object  # type: ignore
     )
 
-    def _write_object(self, value):
+    def _write_object(self: plistlib._BinaryPlistParser, value):  # pyre-ignore
         if isinstance(value, UID):
             ref = self._getrefnum(value)
             self._object_offsets[ref] = self._fp.tell()
