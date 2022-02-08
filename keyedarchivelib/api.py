@@ -14,12 +14,7 @@ if sys.version_info < (3, 8):
     )
 
     def _read_object(self, in_arg):  # type: ignore
-        if sys.hexversion >= 0x030605F0:
-            offset = self._object_offsets[in_arg]
-        else:
-            offset = in_arg
-
-        self._fp.seek(offset)
+        self._fp.seek(in_arg)
         token = self._fp.read(1)[0]
         token_l = token & 0x0F
 

@@ -1,6 +1,6 @@
 # keyedarchivelib
 
-Basic Python (>=3.6) library to generate and parse NSKeyedArchive files.
+Basic Python (>=3.7) library to generate and parse NSKeyedArchive files.
 
 ## Installation
 
@@ -50,4 +50,4 @@ print(dumps(example_dict))
 
 For versions below 3.8, `plistlib` doesn't support all the plist features used by NSKeyedArchiver. A compatibility
 hot-patching layer is used to support these lesser versions of Python. This library has not endured thorough testing
-beyond the latest versions of Python 3.6, 3.7, and 3.8. Please open issues for any observed problems!
+beyond the latest versions of Python 3.7-10. Please open issues for any observed problems!
