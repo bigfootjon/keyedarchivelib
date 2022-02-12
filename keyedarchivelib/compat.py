@@ -19,7 +19,7 @@ except ImportError:
             return self.data
 
         def __repr__(self) -> str:
-            return "%s(%s)" % (self.__class__.__name__, repr(self.data))
+            return f"{self.__class__.__name__}({repr(self.data)})"
 
         def __reduce__(self) -> Tuple[Type["UID"], Tuple[int]]:
             return self.__class__, (self.data,)  # type: ignore
