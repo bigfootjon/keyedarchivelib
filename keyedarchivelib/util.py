@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 from keyedarchivelib.compat import UID
 
 
-def plist_to_dict(plist: Dict[Any, Any]) -> Dict[Any, Any]:  # pyre-ignore
+def plist_to_dict(plist: Dict[str, Any]) -> Dict[str, Any]:
     result = {}
     objects = plist["$objects"]
     keys = objects[1]["NS.keys"]
@@ -14,7 +14,7 @@ def plist_to_dict(plist: Dict[Any, Any]) -> Dict[Any, Any]:  # pyre-ignore
     return result
 
 
-def dict_to_plist(d: Dict[Any, Any]) -> Dict[Any, Any]:  # pyre-ignore
+def dict_to_plist(d: Dict[str, Any]) -> Dict[str, Any]:
     key_indexes = []
     value_indexes = []
     values: List[Any] = []  # pyre-ignore
