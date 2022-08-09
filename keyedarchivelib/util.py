@@ -17,8 +17,8 @@ def plist_to_dict(plist: Dict[str, Any]) -> Dict[str, Any]:
 def dict_to_plist(d: Dict[str, Any]) -> Dict[str, Any]:
     key_indexes = []
     value_indexes = []
-    values: List[Any] = []  # pyre-ignore
-    for key, _ in d.items():
+    values: List[str] = []
+    for key in d.keys():
         if key in values:
             ki = values.index(key) + 2
         else:
