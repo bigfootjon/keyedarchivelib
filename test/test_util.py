@@ -1,6 +1,6 @@
+from plistlib import UID
 from unittest import TestCase
 
-from keyedarchivelib.compat import UID
 from keyedarchivelib.util import dict_to_plist, plist_to_dict
 
 

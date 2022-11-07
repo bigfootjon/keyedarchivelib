@@ -1,9 +1,9 @@
 import plistlib
 import struct
 import sys
+from plistlib import UID
 from typing import Any, BinaryIO, Dict, Type
 
-from keyedarchivelib.compat import UID
 from keyedarchivelib.util import dict_to_plist, plist_to_dict
 
 if sys.version_info < (3, 8):

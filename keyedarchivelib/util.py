@@ -1,6 +1,5 @@
+from plistlib import UID
 from typing import Any, Dict, List
-
-from keyedarchivelib.compat import UID
 
 
 def plist_to_dict(plist: Dict[str, Any]) -> Dict[str, Any]:

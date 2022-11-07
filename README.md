@@ -1,6 +1,6 @@
 # keyedarchivelib
 
-Basic Python (>=3.7) library to generate and parse NSKeyedArchive files.
+Basic Python (>=3.8) library to generate and parse NSKeyedArchive files.
 
 ## Installation
 
