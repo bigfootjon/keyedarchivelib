@@ -1,6 +1,4 @@
 import plistlib
-import struct
-from plistlib import UID
 from typing import Any, BinaryIO, Dict, Type
 
 from keyedarchivelib.util import dict_to_plist, plist_to_dict
