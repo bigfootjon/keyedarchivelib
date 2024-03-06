@@ -14,7 +14,7 @@ if os.popen("git tag -l " + keyedarchivelib.VERSION).read() == "":
         + '"'
     )
     os.system("git push --tags")
-    os.system("python3 setup.py sdist bdist_wheel")
+    os.system("python3 -m build")
     os.system("python3 -m twine upload dist/*")
 else:
     print("There is already a tag for version " + keyedarchivelib.VERSION)
