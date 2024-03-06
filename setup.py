@@ -1,15 +1,16 @@
 from setuptools import setup, find_packages  # type: ignore
 
-import keyedarchivelib
-
 with open("README.md", "r") as readme_file:
     long_description: str = readme_file.read()
+
+with open("keyedarchivelib/version.py", "r") as version_file:
+    exec(version_file.read())
 
 setup(
     name="keyedarchivelib",
     package_data={"keyedarchivelib": ["py.typed"]},
     packages=find_packages(exclude=["test", "test.*"]),
-    version=keyedarchivelib.VERSION,
+    version=VERSION,
     python_requires=">=3.8",
     description="Generate and parse NSKeyedArchive files",
     long_description=long_description,
@@ -20,7 +21,7 @@ setup(
     author_email="jon@jonjanzen.com",
     url="https://github.com/bigfootjon/keyedarchivelib",
     download_url="https://github.com/bigfootjon/keyedarchivelib/tarball/"
-    + keyedarchivelib.VERSION,
+    + VERSION,
     keywords=[],
     classifiers=[
         "Development Status :: 5 - Production/Stable",

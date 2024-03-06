@@ -1,3 +1,2 @@
 from keyedarchivelib.api import dump, dumps, load, loads  # noqa: F401
-
-VERSION = "1.0.2"
+from keyedarchivelib.version import VERSION # noqa: F401
