@@ -14,7 +14,7 @@ setup(
     name="keyedarchivelib",
     package_data={"keyedarchivelib": ["py.typed"]},
     packages=find_packages(exclude=["test", "test.*"]),
-    version=VERSION,
+    version=VERSION,  # noqa: F821
     python_requires=">=3.8",
     description="Generate and parse NSKeyedArchive files",
     long_description=long_description,
@@ -25,7 +25,7 @@ setup(
     author_email="jon@jonjanzen.com",
     url="https://github.com/bigfootjon/keyedarchivelib",
     download_url="https://github.com/bigfootjon/keyedarchivelib/tarball/"
-    + VERSION,
+    + VERSION,  # noqa: F821
     keywords=[],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
