@@ -1,4 +1,8 @@
+from typing import TYPE_CHECKING
 from setuptools import setup, find_packages  # type: ignore
+
+if TYPE_CHECKING:
+    VERSION: str
 
 with open("README.md", "r") as readme_file:
     long_description: str = readme_file.read()
