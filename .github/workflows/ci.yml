@@ -34,8 +34,8 @@ jobs:
         run: |
           coverage run -m unittest --verbose
       #          coveralls
-      - name: Check Types - Pyre
-        run: pyre check
+      - name: Check Types - Pyrefly
+        run: pyrefly check
       - name: Check Types - MyPy
         run: mypy --exclude "build" .
       - name: Check Lint - Flake8
