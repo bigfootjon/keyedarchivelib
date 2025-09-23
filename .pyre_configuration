@@ -1,7 +1,0 @@
-{
-  "source_directories": [
-    "."
-  ],
-  "exclude": [".*/build"],
-  "strict": true
-}
