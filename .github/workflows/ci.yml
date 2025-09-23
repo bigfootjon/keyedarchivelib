@@ -31,9 +31,7 @@ jobs:
       - name: Install package
         run: pip install --editable .
       - name: Run Tests
-        run: |
-          coverage run -m unittest --verbose
-      #          coveralls
+        run: python -m unittest --verbose
       - name: Check Types - Pyrefly
         run: pyrefly check
       - name: Check Types - MyPy
