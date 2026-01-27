@@ -1,7 +1,7 @@
 wheel==0.46.3
 twine==6.2.0
 mypy==1.19.1
-pyrefly==0.49.0
+pyrefly==0.50.0
 flake8==7.3.0
 black==25.11.0
 build==1.4.0
