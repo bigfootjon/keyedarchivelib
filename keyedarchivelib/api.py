@@ -4,18 +4,18 @@ from typing import Any, BinaryIO, Dict, Type
 from keyedarchivelib.util import dict_to_plist, plist_to_dict
 
 
-def load(  # pyre-ignore
+def load(
     fp: BinaryIO,
-    dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
+    dict_type: Type[Dict[Any, Any]] = dict,
 ) -> Dict[Any, Any]:
     return plist_to_dict(
         plistlib.load(fp, fmt=plistlib.FMT_BINARY, dict_type=dict_type)
     )
 
 
-def loads(  # pyre-ignore
+def loads(
     value: bytes,
-    dict_type: Type[Dict[Any, Any]] = dict,  # pyre-ignore
+    dict_type: Type[Dict[Any, Any]] = dict,
 ) -> Dict[Any, Any]:
     return plist_to_dict(
         plistlib.loads(value, fmt=plistlib.FMT_BINARY, dict_type=dict_type)
@@ -23,7 +23,7 @@ def loads(  # pyre-ignore
 
 
 def dump(
-    value: Dict[Any, Any],  # pyre-ignore
+    value: Dict[Any, Any],
     fp: BinaryIO,
     sort_keys: bool = True,
     skipkeys: bool = False,
@@ -38,7 +38,7 @@ def dump(
 
 
 def dumps(
-    value: Dict[Any, Any],  # pyre-ignore
+    value: Dict[Any, Any],
     skipkeys: bool = False,
     sort_keys: bool = True,
 ) -> bytes:
