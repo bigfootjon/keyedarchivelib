@@ -1,3 +1,35 @@
+[project]
+name = "keyedarchivelib"
+dynamic = ["version"]
+authors = [{ name = "Jonathan Janzen", email = "jon@jonjanzen.com" }]
+description = "Generate and parse NSKeyedArchive files"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3 :: Only",
+  "Typing :: Typed",
+]
+license = "LGPL-3.0-only"
+license-files = ["LICENSE.txt"]
+
+[project.urls]
+Homepage = "https://github.com/bigfootjon/keyedarchivelib"
+Issues = "https://github.com/bigfootjon/keyedarchivelib/issues"
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "keyedarchivelib.VERSION"}
