@@ -1,5 +1,5 @@
 from typing import TYPE_CHECKING
-from setuptools import setup, find_packages  # type: ignore
+from setuptools import setup, find_packages
 
 if TYPE_CHECKING:
     VERSION: str = ""
@@ -10,9 +10,11 @@ with open("README.md", "r") as readme_file:
 with open("keyedarchivelib/version.py", "r") as version_file:
     exec(version_file.read())
 
+package_data: dict[str, list[str]] = {"keyedarchivelib": ["py.typed"]}
+
 setup(
     name="keyedarchivelib",
-    package_data={"keyedarchivelib": ["py.typed"]},
+    package_data=package_data,
     packages=find_packages(exclude=["test", "test.*"]),
     version=VERSION,  # noqa: F821
     python_requires=">=3.8",
