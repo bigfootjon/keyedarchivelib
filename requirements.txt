@@ -1,5 +1,5 @@
 twine==6.2.0
-mypy==1.19.1
+mypy==2.1.0
 pyrefly==1.1.1
 flake8==7.3.0
 black==25.11.0
