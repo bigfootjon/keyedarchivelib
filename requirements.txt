@@ -4,4 +4,4 @@ pyrefly==1.1.1
 flake8==7.3.0
 black==26.5.1
 build==1.5.0
-types-setuptools==82.0.0.20260408
+types-setuptools==82.0.0.20260518
